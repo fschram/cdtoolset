@@ -23,8 +23,7 @@ public class Person implements Serializable {
 	@Column
 	private String lastName;
 
-	public Person() {
-	}
+	public Person() {}
 
 	public Person(String firstName, String lastName) {
 		super();
@@ -90,8 +89,9 @@ public class Person implements Serializable {
 		} else if (!firstName.equals(other.firstName))
 			return false;
 		if (id == null) {
-			if (other.id != null)
+			if (other.id != null) {
 				return false;
+			}
 		} else if (!id.equals(other.id))
 			return false;
 		if (lastName == null) {
