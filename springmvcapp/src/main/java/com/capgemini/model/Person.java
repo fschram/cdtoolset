@@ -90,8 +90,9 @@ public class Person implements Serializable {
 		} else if (!firstName.equals(other.firstName))
 			return false;
 		if (id == null) {
-			if (other.id != null)
+			if (other.id != null) {
 				return false;
+			}
 		} else if (!id.equals(other.id))
 			return false;
 		if (lastName == null) {
