@@ -37,7 +37,7 @@ public class DataInitializer {
 		entityManager.persist(p);
 		people.add(p.getId());
 	}
-	
+
 	public EntityManager getEntityManager() {
 		return entityManager;
 	}
