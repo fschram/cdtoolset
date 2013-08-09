@@ -33,5 +33,4 @@ public class PersonDao {
 			return entityManager.merge(person);
 		}		
 	}	
-	
 }
