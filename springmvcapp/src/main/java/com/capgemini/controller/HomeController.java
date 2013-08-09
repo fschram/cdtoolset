@@ -26,6 +26,4 @@ public class HomeController {
 				"This is the message from the controller!");
 		return "home";
 	}
-	
-
 }
