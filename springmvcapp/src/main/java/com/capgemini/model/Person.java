@@ -23,7 +23,8 @@ public class Person implements Serializable {
 	@Column
 	private String lastName;
 
-	public Person() {}
+	public Person() {
+	}
 
 	public Person(String firstName, String lastName) {
 		super();
@@ -76,8 +77,9 @@ public class Person implements Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
+		}
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
