@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>
-	Hello worlds! - 
+	Hello Amsterdam! - 
 </h1>
 ${controllerMessage}<br/>
 <br/>
 <br/>
-<a href="person/list">Go to the person list</a>
+<a href="person/listasdgasfdasfd">Go to the person list</a>
 </body>
 </html>
