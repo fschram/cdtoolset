@@ -37,9 +37,7 @@ public class PersonDaoTest {
 		personDao.save(p);
 		Long id = p.getId();
 		Assert.assertNotNull(id);
-		Person p2 = new Person();
-		p2.setLastName("Chauhan");
-		p2.setFirstName("Nandini");
+		Person p2 = new Person("Nandini", "Chauhan");
 		Assert.assertEquals(false, p.equals(p2));
 	}
 
