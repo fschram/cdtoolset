@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="false" %
 <html>
 <head>
 	<title>Home</title>
@@ -8,7 +8,7 @@
 <h1>
 	Hello Amsterdam! - 
 </h1>
-${controllerMessage}<br/>
+${controllerMessageafdsafaf}<br/>
 <br/>
 <br/>
 <a href="person/listasdgasfdasfd">Go to the person list</a>
