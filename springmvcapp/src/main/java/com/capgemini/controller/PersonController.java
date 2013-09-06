@@ -18,14 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/person/")
 public class PersonController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
 
 	@Autowired
 	private PersonDao personDao;
 	
 	@RequestMapping(method=RequestMethod.GET,value="edit")
 	public ModelAndView editPerson(@RequestParam(value="id",required=false) Long id) {		
-		logger.debug("Received request to edit person id : "+id);				
+		LOGGER.debug("Received request to edit person id : "+id);				
 		ModelAndView mav = new ModelAndView();		
  		mav.setViewName("edit");
  		Person person = null;
@@ -43,7 +43,7 @@ public class PersonController {
 	
 	@RequestMapping(method=RequestMethod.POST,value="edit") 
 	public String savePerson(@ModelAttribute Person person) {
-		logger.debug("Received postback on person "+person);		
+		LOGGER.debug("Received postback on person "+person);		
 		personDao.save(person);
 		return "redirect:list";
 		
@@ -51,10 +51,10 @@ public class PersonController {
 	
 	@RequestMapping(method=RequestMethod.GET,value="list")
 	public ModelAndView listPeople() {
-		logger.debug("Received request to list persons");
+		LOGGER.debug("Received request to list persons");
 		ModelAndView mav = new ModelAndView();
 		List<Person> people = personDao.getPeople();
-		logger.debug("Person Listing count = "+people.size());
+		LOGGER.debug("Person Listing count = "+people.size());
 		mav.addObject("people",people);
 		mav.setViewName("list");
 		return mav;
