@@ -21,7 +21,7 @@ public class Person implements Serializable {
 	private String firstName;
 
 	@Column
-	private String lastName;
+	private String lastNaam;
 
 	public Person() {
 	}
