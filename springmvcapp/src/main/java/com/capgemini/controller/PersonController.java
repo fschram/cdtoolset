@@ -37,29 +37,29 @@ public class PersonController {
            person = personDao.find(id);
        }
 
- 		mav.addObject("person", person);
-		return mav;
-		
-	}
-	
-	
-	@RequestMapping(method=RequestMethod.POST,value="edit") 
-	public String savePerson(@ModelAttribute Person person) {
-		LOGGER.debug("Received postback on person "+person);		
-		personDao.save(person);
-		return "redirect:list";
-		
-	}
-	
-	@RequestMapping(method=RequestMethod.GET,value="list")
-	public ModelAndView listPeople() {
-		LOGGER.debug("Received request to list persons");
-		ModelAndView mav = new ModelAndView();
-		List<Person> people = personDao.getPeople();
-		LOGGER.debug("Person Listing count = "+people.size());
-		mav.addObject("people",people);
-		mav.setViewName("list");
-		return mav;
-		
-	}
+        mav.addObject("person", person);
+        return mav;
+
+    }
+
+
+    @RequestMapping(method=RequestMethod.POST,value="edit") 
+    public String savePerson(@ModelAttribute Person person) {
+        LOGGER.debug("Received postback on person "+person);		
+        personDao.save(person);
+        return "redirect:list";
+
+    }
+
+    @RequestMapping(method=RequestMethod.GET,value="list")
+    public ModelAndView listPeople() {
+        LOGGER.debug("Received request to list persons");
+        ModelAndView mav = new ModelAndView();
+        List<Person> people = personDao.getPeople();
+        LOGGER.debug("Person Listing count = "+people.size());
+        mav.addObject("people",people);
+        mav.setViewName("list");
+        return mav;
+    
+    }
 }
