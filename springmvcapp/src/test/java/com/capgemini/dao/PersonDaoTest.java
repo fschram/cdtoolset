@@ -36,7 +36,7 @@ public class PersonDaoTest {
 		p.setLastName("Gibson");
 		personDao.save(p);
 		Long id = p.getId();
-		Assert.assertNull(id);
+		Assert.assertNotNull(id);
 	}
 
 	@Test
