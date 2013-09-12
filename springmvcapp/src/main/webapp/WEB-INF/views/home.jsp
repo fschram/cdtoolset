@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-	All your base are belong to us
+	Blaaaa
 </h1>
 ${controllerMessage}<br/>
 <br/>
