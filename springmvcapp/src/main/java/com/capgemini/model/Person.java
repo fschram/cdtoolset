@@ -86,15 +86,15 @@ public class Person implements Serializable {
         Person other = (Person) obj;
         if (firstName == null && other.firstName != null){
                 return false;}
-        } else if (!firstName.equals(other.firstName)){
+        else if (!firstName.equals(other.firstName)){
             return false;}
         if (id == null && other.id != null){
                 return false;}
-        } else if (!id.equals(other.id)){
+        else if (!id.equals(other.id)){
             return false;}
         if (lastName == null && other.lastName != null){
                 return false;}
-        } else if (!lastName.equals(other.lastName)){
+        else if (!lastName.equals(other.lastName)){
             return false;}
         return true;
     }
