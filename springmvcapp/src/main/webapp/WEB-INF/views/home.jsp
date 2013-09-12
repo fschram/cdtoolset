@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-	Hello Leeuwarden! - 
+	All your base are belong to us
 </h1>
 ${controllerMessage}<br/>
 <br/>
