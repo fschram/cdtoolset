@@ -15,7 +15,7 @@ public class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idxyz;
 
     @Column
     private String firstName;
