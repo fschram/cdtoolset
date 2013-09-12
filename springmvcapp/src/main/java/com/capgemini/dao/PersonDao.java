@@ -31,6 +31,6 @@ public class PersonDao {
             return person;
         } else {
             return entityManager.merge(person);
-        }		
-    }	
+        }
+    }
 }
