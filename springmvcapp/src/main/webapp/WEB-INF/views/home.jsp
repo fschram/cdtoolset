@@ -5,9 +5,9 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
+<h2>
 	Hallo Leeuwarden! - 
-</h1>
+</h2>
 ${controllerMessage}<br/>
 <br/>
 <br/>
