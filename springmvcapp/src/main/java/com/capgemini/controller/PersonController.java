@@ -32,7 +32,7 @@ public class PersonController {
         mav.setViewName("edit");
         Person person = null;
         if (id == null) {
-            person = new Person();
+        person = new Person();
         } else {
            person = personDao.find(id);
        }
@@ -45,7 +45,7 @@ public class PersonController {
 
     @RequestMapping(method=RequestMethod.POST,value="edit") 
     public String savePerson(@ModelAttribute Person person) {
-        LOGGER.debug("Received postback on person "+person);		
+        LOGGER.debug("Received postback on person "+person);
         personDao.save(person);
         return "redirect:list";
 
