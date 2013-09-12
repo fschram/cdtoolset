@@ -17,24 +17,24 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/person/")
 public class PersonController {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
 
-	@Autowired
-	private PersonDao personDao;
-	
-	@RequestMapping(method=RequestMethod.GET,value="edit")
-	public ModelAndView editPerson(@RequestParam(value="id",required=false) Long id) {		
-		LOGGER.debug("Received request to edit person id : "+id);				
-		ModelAndView mav = new ModelAndView();		
- 		mav.setViewName("edit");
- 		Person person = null;
- 		if (id == null) {
- 			person = new Person();
- 		} else {
- 			person = personDao.find(id);
- 		}
- 		
+    private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
+
+    @Autowired
+    private PersonDao personDao;
+
+    @RequestMapping(method=RequestMethod.GET,value="edit")
+    public ModelAndView editPerson(@RequestParam(value="id",required=false) Long id) {
+        LOGGER.debug("Received request to edit person id : "+id);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("edit");
+        Person person = null;
+        if (id == null) {
+            person = new Person();
+        } else {
+           person = personDao.find(id);
+       }
+
  		mav.addObject("person", person);
 		return mav;
 		
