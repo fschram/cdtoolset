@@ -5,9 +5,9 @@
 	<title>Capgemini</title>
 </head>
 <body>
-<h1>
-	Blaaaa
-</h1>
+<h2>
+	Hallo Leeuwarden! - 
+</h2>
 ${controllerMessage}<br/>
 <br/>
 <br/>
