@@ -17,8 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/person/")
 public class PersonController {
-   
-
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
 
@@ -39,16 +37,13 @@ public class PersonController {
 
         mav.addObject("person", person);
         return mav;
-
     }
-
 
     @RequestMapping(method=RequestMethod.POST,value="edit") 
     public String savePerson(@ModelAttribute Person person) {
         LOGGER.debug("Received postback on person "+person);
         personDao.save(person);
         return "redirect:list";
-
     }
 
     @RequestMapping(method=RequestMethod.GET,value="list")
@@ -60,6 +55,5 @@ public class PersonController {
         mav.addObject("people",people);
         mav.setViewName("list");
         return mav;
-    
     }
 }
