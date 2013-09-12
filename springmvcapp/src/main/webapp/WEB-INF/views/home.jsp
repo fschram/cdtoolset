@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>
-	Hallo Leeuwarden! - 
+	Hello world! - 
 </h2>
 ${controllerMessage}<br/>
 <br/>
