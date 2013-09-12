@@ -84,18 +84,15 @@ public class Person implements Serializable {
         if (getClass() != obj.getClass()){
             return false;}
         Person other = (Person) obj;
-        if (firstName == null) {
-            if (other.firstName != null){
+        if (firstName == null && other.firstName != null){
                 return false;}
         } else if (!firstName.equals(other.firstName)){
             return false;}
-        if (id == null) {
-            if (other.id != null){
+        if (id == null && other.id != null){
                 return false;}
         } else if (!id.equals(other.id)){
             return false;}
-        if (lastName == null) {
-            if (other.lastName != null){
+        if (lastName == null && other.lastName != null){
                 return false;}
         } else if (!lastName.equals(other.lastName)){
             return false;}
