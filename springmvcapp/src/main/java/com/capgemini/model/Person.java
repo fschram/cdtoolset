@@ -75,14 +75,7 @@ public class Person implements Serializable {
         return result;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj){
-            return true;}
-        if (obj == null){
-            return false;}
-        if (getClass() != obj.getClass()){
-            return false;}
+    private boolean equals2(Object obj) {
         Person other = (Person) obj;
         if (firstName == null && other.firstName != null){
                 return false;}
@@ -97,6 +90,17 @@ public class Person implements Serializable {
         else if (!lastName.equals(other.lastName)){
             return false;}
         return true;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;}
+        if (obj == null){
+            return false;}
+        if (getClass() != obj.getClass()){
+            return false;}
+        return equals2(obj);
     }
 
 }
