@@ -21,7 +21,7 @@ private static final Logger LOGGER = LoggerFactory
     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(final Model model) {
-        lOGGER.info("Welcome home!");
+        LOGGER.info("Welcome home!");
         model.addAttribute("controllerMessage",
             "This is the message from the controller!");
         return "home";
