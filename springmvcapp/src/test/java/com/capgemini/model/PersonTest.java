@@ -11,4 +11,10 @@ public class PersonTest {
 		Person p = new Person("Pietje", "Puk");
 		Assert.assertEquals("Test voornaam", "Pietje", p.getFirstName());
 	}
+	
+	public void testEqual(){
+		Person p = new Person();
+		p.setFirstName("firstName");		
+		Assert.assertEquals("Test voornaam", "Pietje", p.equals("firstName"));
+	}
 }
