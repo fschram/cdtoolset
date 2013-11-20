@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Sample controller for going to the home page with a message
- */
+ */ 
 @Controller
 public class HomeController {
 
@@ -17,7 +17,7 @@ private static final Logger LOGGER = LoggerFactory
     .getLogger(HomeController.class);
 
     /**
-    * Selects the home page and populates the model with a message
+    * Selects the home page and populates the model with a messages 
     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(final Model model) {
