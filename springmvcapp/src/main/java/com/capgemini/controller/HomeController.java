@@ -24,6 +24,6 @@ private static final Logger LOGGER = LoggerFactory
         LOGGER.info("Welcome home!");
         model.addAttribute("controllerMessage",
             "This is the message from the controller!");
-        return "home ";
+       return "home";
     }
 }
